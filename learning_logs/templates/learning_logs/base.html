@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Learning Log</title>
+  <meta charset="UTF-8">
+  <title>Learning Log</title>
 </head>
 <body>
   <nav>
-      <a href="{% url 'learning_logs:main' %}">Learning Log</a> |
-      <a href="{% url 'learning_logs:topics' %}">Topics</a>
+    <a href="{% url 'learning_logs:main' %}">Learning Log</a> |
+    <a href="{% url 'learning_logs:topics' %}">Topics</a>
   </nav>
 
   {% block content %}{% endblock content %}
