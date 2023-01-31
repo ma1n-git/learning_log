@@ -3,7 +3,7 @@
 {% block content %}
   <p>Add a new topic:</p>
 
-<form action="{% url 'learning_logs:edit_entry' entry.id° %}" method="post">
+<form action="{% url 'learning_logs:edit_entry' entry.id %}" method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <button name="submit">Save changes</button>

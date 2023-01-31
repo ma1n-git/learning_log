@@ -49,7 +49,7 @@ def new_entry(request, topic_id):
         form = EntryForm()
     else:
         # POST was sent; process data
-        form = TopicForm(data=request.POST)
+        form = EntryForm(data=request.POST)
         if form.is_valid():
             new_entry = form.save(commit=False)
             new_entry.topic = topic
@@ -63,7 +63,7 @@ def new_entry(request, topic_id):
 
 def edit_entry(request, entry_id):
     """Edit an existing entry."""
-    entry = Entry.objects.get(entry_id)
+    entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
 
     if request.method != 'POST':
@@ -74,7 +74,7 @@ def edit_entry(request, entry_id):
         form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()
-            return redirect('learning_logsLtopic', topic_id=topic.id)
+            return redirect('learning_logs:topic', topic_id=topic.id)
 
     # Show editing form.
     context = {'entry': entry, 'topic': topic, 'form': form}
