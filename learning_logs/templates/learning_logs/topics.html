@@ -10,8 +10,9 @@
     {% empty %}
       <li>No topics have  been added yet.</li>
     {% endfor %}
-  </ul>
 
-  <a href="{% url 'learning_logs:new_topic' %}">Add a new topic</a>
+    <li><a href="{% url 'learning_logs:new_topic' %}">Add a new topic...</a></li>
+
+  </ul>
 
 {% endblock content %}

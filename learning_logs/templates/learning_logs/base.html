@@ -7,7 +7,8 @@
 <body>
   <nav>
     <a href="{% url 'learning_logs:main' %}">Learning Log</a> |
-    <a href="{% url 'learning_logs:topics' %}">Topics</a>
+    <a href="{% url 'learning_logs:topics' %}">Topics</a> |
+    <a href="{% url 'learning_logs:new_topic' %}">New topic</a>
   </nav>
 
   {% block content %}{% endblock content %}
