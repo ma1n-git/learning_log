@@ -1,4 +1,7 @@
 {% extends 'learning_logs/base.html' %}
+{% load static %}
+
+{% block css_link %}{% static 'main.css' %}{% endblock css_link %}
 
 {% block content %}
   <p>Learning Log helps you keep track of your learning, for any topic you're learning about.</p>

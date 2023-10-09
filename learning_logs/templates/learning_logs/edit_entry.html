@@ -1,4 +1,7 @@
 {% extends 'learning_logs/base.html' %}
+{% load static %}
+
+{% block css_link %}{% static 'edit_entry.css' %}{% endblock css_link %}
 
 {% block content %}
   <p>Add a new topic:</p>
